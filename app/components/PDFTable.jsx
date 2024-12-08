@@ -35,6 +35,10 @@ const PDFTable = () => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
+        <View style={styles.section}>
+          <Text>برنامه پزشکی</Text>
+        </View>
+
         {/* جدول */}
         <View style={styles.table}>
           {/* ردیف هدر */}

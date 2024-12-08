@@ -1,9 +1,10 @@
 "use client";
 import { pdf } from "@react-pdf/renderer";
-import PDFDocument from "./PDFSample";
+/* import PDFDocument from "./PDFSample"; */
+import BodyNessPdf from "./BodyNessPdf";
 /* import PDFTable from "./PDFTable"; */
 const DownloadPDF = async () => {
-  const blob = await pdf(<PDFDocument />).toBlob();
+  const blob = await pdf(<BodyNessPdf />).toBlob();
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
@@ -14,7 +15,7 @@ const DownloadPDF = async () => {
 const MyPDFPage = () => {
   return (
     <div>
-      <button onClick={DownloadPDF}>Download PDF</button>
+      <button onClick={DownloadPDF}>دانلود</button>
     </div>
   );
 };
